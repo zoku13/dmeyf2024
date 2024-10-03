@@ -7,7 +7,7 @@ require("rpart")
 require("rpart.plot")
 
 # Aqui se debe poner la carpeta de la materia de SU computadora local
-setwd("~/buckets/b1") # Establezco el Working Directory
+setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf") # Establezco el Working Directory
 
 # cargo el dataset que tiene la clase calculada !
 dataset <- fread("./datasets/competencia_01.csv")
@@ -20,11 +20,11 @@ dapply <- dataset[foto_mes == 202106] # defino donde voy a aplicar el modelo
 modelo <- rpart(
     formula = "clase_ternaria ~ .",
     data = dtrain, # los datos donde voy a entrenar
-    xval = 0,
-    cp = -1, # esto significa no limitar la complejidad de los splits
-    minsplit = 250, # minima cantidad de registros para que se haga el split
-    minbucket = 100, # tamaño minimo de una hoja
-    maxdepth = 7  # profundidad maxima del arbol
+    xval = 5,
+    cp = -0.878472389123754, # esto significa no limitar la complejidad de los splits (con -1)
+    minsplit = 2196, # minima cantidad de registros para que se haga el split
+    minbucket = 1095, # tamaño minimo de una hoja
+    maxdepth = 20  # profundidad maxima del arbol
 )
 
 
