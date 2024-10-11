@@ -257,8 +257,8 @@ set.seed(PARAM$semilla_azar)
 # me quedo con PARAM$semillerio  primos al azar
 ksemillas <- sample(primos)[seq(PARAM$semillas_cantidad)]
 
-#setwd("~/buckets/b1/exp/") # Establezco el Working Directory
-setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
+setwd("~/buckets/b1/exp/") # Establezco el Working Directory
+#setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
 
 ## cargo el dataset donde voy a entrenar el modelo
 dataset <- fread(paste0(PARAM$experimento_data,"/dataset.csv.gz"))
@@ -316,7 +316,7 @@ dataset[, clase01 := ifelse(clase_ternaria == "CONTINUA", 0L, 1L)]
 campos_buenos <- setdiff(
   colnames(dataset),
   c("clase_ternaria", "clase01",
-    "part_training", "part_validation", "part_testing",
+    "part_training", "part_testing",
     "part_final_train", "part_future")
 )
 
