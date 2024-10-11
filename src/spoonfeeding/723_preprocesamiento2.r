@@ -32,7 +32,7 @@ PARAM$input$dataset <- "./datasets/competencia_01.csv"
 PARAM$semilla_azar <- 103301 # Aqui poner su  primer  semilla
 
 # Corrección del drifting por deflación 
-PARAM$driftingcorreccion <- "deflacion"
+PARAM$driftingcorreccion <- "ninguno"
 
 PARAM$clase_minoritaria <- c("BAJA+1","BAJA+2")
 
@@ -269,8 +269,8 @@ tb_indices$foto_mes <- vfoto_mes
 
 tb_indices
 
-#setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
-setwd("~/buckets/b1/exp/") 
+setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
+#setwd("~/buckets/b1/exp/") 
 
 # cargo el dataset donde voy a entrenar el modelo
 dataset <- fread(PARAM$input$dataset)

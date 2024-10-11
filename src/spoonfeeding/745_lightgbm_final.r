@@ -111,7 +111,7 @@ dataset[, clase01 := ifelse(clase_ternaria == "CONTINUA", 0L, 1L)]
 campos_buenos <- setdiff(
   colnames(dataset),
   c("clase_ternaria", "clase01",
-    "part_training", "part_validation", "part_testing",
+    "part_training", "part_testing",
     "part_final_train", "part_future")
 )
 
