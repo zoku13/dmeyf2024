@@ -40,8 +40,8 @@ options(error = function() {
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
 
-PARAM$experimento_data <- "PP7230"
-PARAM$experimento <- "HT7440"
+PARAM$experimento_data <- "PP7230V2"
+PARAM$experimento <- "HT7440V2"
 
 PARAM$semilla_azar <- 103301 # Aqui poner su  primer  semilla
 
@@ -257,8 +257,8 @@ set.seed(PARAM$semilla_azar)
 # me quedo con PARAM$semillerio  primos al azar
 ksemillas <- sample(primos)[seq(PARAM$semillas_cantidad)]
 
-#setwd("~/buckets/b1/exp/") # Establezco el Working Directory
-setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
+setwd("~/buckets/b1/exp/") # Establezco el Working Directory
+#setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")# Establezco el Working Directory
 
 ## cargo el dataset donde voy a entrenar el modelo
 dataset <- fread(paste0(PARAM$experimento_data,"/dataset.csv.gz"))
