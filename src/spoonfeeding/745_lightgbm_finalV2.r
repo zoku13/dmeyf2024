@@ -28,10 +28,10 @@ options(error = function() {
 # defino los parametros de la corrida, en una lista, la variable global  PARAM
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
-PARAM$experimento_data <- "PP7230"
-PARAM$experimento_bayesiana <- "HT7440"
+PARAM$experimento_data <- "PP7230V2"
+PARAM$experimento_bayesiana <- "HT7440V2"
 
-PARAM$experimento <- "KA7450"
+PARAM$experimento <- "KA7450V2"
 
 PARAM$semilla_azar <- 103031 # Aqui poner su  primer  semilla
 PARAM$semillas_cantidad <- 5
@@ -60,8 +60,8 @@ action_limitar_memoria <- function( GB_min = 4 ) {
 action_limitar_memoria( 4 )
 
 # Aqui empieza el programa
-#setwd("~/buckets/b1/exp/")
-setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf/exp")
+setwd("~/buckets/b1/exp/")
+#setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf/exp")
 
 # genero las semillas con las que voy a trabajar
 #  ninguna de ellas es exactamente la original del alumno
