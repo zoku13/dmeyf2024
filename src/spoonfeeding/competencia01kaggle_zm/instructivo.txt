@@ -1,0 +1,33 @@
+
+Instructivo:
+1. 723_preprocesamientoV2:
+
+Cambiar directorio por el que vaya a usar en la (línea 273) y se aclara que se está usando el archivo competencia_01.csv 
+que fue generado de acuerdo al código proporcionado por el profesor en Zulip.
+
+Del código base se añadieron ratios financieros (línea 350), relaciones entre variables (línea 355), 
+y delta lags de orden 2 (línea 465) 
+
+Asimismo se realizó un undersamplig del 25% de la clase "CONTINUA" (línea 58)  y se eliminaron las variables
+cprestamos_personales y mprestamos_personales (línea 279)
+
+Se elimina validation en la estrategia de entrenamiento.
+
+El archivo de salida se guarda en la carpeta: PP7230V2 
+
+2. 744_lightgbm_binaria_BOV2:
+
+Tiene como entrada la carpeta generada en el anterior script PP7230V2 y tiene como salida la carpeta HT7440V2 
+
+Solo cambiar el directorio de trabajo al que vaya a usar
+
+
+3. 745_lightgbm_finalV2
+
+Tiene como entrada la carpeta generada en los anteriores dos script (PP7230V2 y HT7440V2) y como salida la carpeta  
+KA7450V2 donde se encuentran los archivos para subir a kaggle.
+
+Cambiar el directorio que vaya a usar.
+
+De los archivos generados se escogió el segundo "MODELO 2" con semilla 724267 y con corte en 12000. El archivo 
+se denomina exp_KA7450V2_KA7450V2_2_724267_12000.csv
