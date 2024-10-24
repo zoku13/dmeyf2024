@@ -428,7 +428,7 @@ wf_agosto_v1 <- function( pnombrewf )
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_02.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="MachineLearning")
+  CA_catastrophe_base( metodo="Ninguno")
   FEintra_manual_base()
   DR_drifting_base(metodo="rank_cero_fijo")
   FEhist_base()
@@ -439,7 +439,7 @@ wf_agosto_v1 <- function( pnombrewf )
     mtry_ratio= 0.2
   )
 
-  CN_canaritos_asesinos_base(ratio=0.2, desvio=4.0)
+#  CN_canaritos_asesinos_base(ratio=0.2, desvio=4.0)
 
   # Etapas modelado
   ts8 <- TS_strategy_base8()
