@@ -20,11 +20,8 @@ PARAM$experimento <- "CA7050"
 # Aqui comienza el programa
 
 # copio si hace falta el dataset
-#setwd("~/buckets/b1/")
 
-setwd("C:/Users/Zonia/OneDrive/Documentos/maest_2024/eyf")
-
-
+setwd("~/buckets/b1/")
 
 # cargo el dataset
 dataset <- fread(PARAM$dataset) # donde entreno
