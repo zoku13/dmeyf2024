@@ -424,7 +424,7 @@ EV_evaluate_conclase_gan <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202106 donde SI hay clase completa
 
-wf1_junio <- function( pnombrewf )
+wf1_v1 <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
@@ -432,7 +432,7 @@ wf1_junio <- function( pnombrewf )
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_02.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="Ninguno")
+  #CA_catastrophe_base( metodo="Ninguno")
   #FEintra_manual_base()
   DR_drifting_base(metodo="rank_cero_fijo")
   FEhist_base()
@@ -461,5 +461,5 @@ wf1_junio <- function( pnombrewf )
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202106
-wf1_junio()
+wf1_v1()
 
