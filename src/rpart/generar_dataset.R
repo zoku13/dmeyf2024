@@ -1,7 +1,7 @@
 require( "data.table" )
 
 # leo el dataset
-dataset <- fread("~/buckets/b1/datasets/competencia_02_crudo.gz.csv" )
+dataset <- fread("~/buckets/b1/datasets/competencia_02_crudo.csv.gz" )
 
 # calculo el periodo0 consecutivo
 dsimple <- dataset[, list(
