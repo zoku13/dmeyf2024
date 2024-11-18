@@ -1,7 +1,7 @@
 require("rlang", quietly=TRUE) 
 
 # workflow que voy a correr
-PARAM <- "src/workflows/918_workflow_base.r"
+PARAM <- "src/workflows/918_lugdeltaten1y2.r"
 
 envg <- env()
 
