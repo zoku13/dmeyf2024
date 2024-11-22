@@ -456,19 +456,6 @@ wf_SEMI_2 <- function( pnombrewf )
   FEhist_base()
   ultimo <- FErf_attributes_base()
   
-  # Agregar nuevas columnas
-  cat("Agregando nuevas columnas calculadas\n")
-  if (atributos_presentes(c("ctrx_quarter_normalizado", "ctarjeta_visa_transacciones"))) {
-    dataset[, iter_1_var_625 := ctrx_quarter_normalizado + ctarjeta_visa_transacciones]
-  }
-  
-  if (atributos_presentes(c("rf_011_008", "rf_002_005", "ctrx_quarter_normalizado", 
-                            "mcuentas_saldo_rank", "mtarjeta_visa_consumo_rank"))) {
-    dataset[, iter_4_31 := rf_011_008 + rf_002_005 + ctrx_quarter_normalizado +
-              mcuentas_saldo_rank + mcuentas_saldo_rank + mtarjeta_visa_consumo_rank]
-  }
-  cat("Nuevas columnas agregadas con éxito\n")
-  
   
   CN_canaritos_asesinos_base(ratio=1, desvio=0)
 
