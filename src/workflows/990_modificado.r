@@ -443,7 +443,7 @@ KA_evaluate_kaggle_semillerio <- function( pinputexps )
 # Que predice 202107 donde conozco la clase
 # y ya genera graficos
 
-wf_SEMI_can10_tend3 <- function( pnombrewf )
+wf_SEMI_2 <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea fija
 
@@ -499,6 +499,6 @@ wf_SEMI_can10_tend3 <- function( pnombrewf )
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_SEMI_can10_tend3()
+wf_SEMI_2()
 
 
