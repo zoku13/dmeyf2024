@@ -254,11 +254,18 @@ CN_canaritos_asesinos_base <- function( pinputexps, ratio, desvio)
 }
 #-------------------------------------------------------------------------------
 # Nueva etapa: Suma de columnas importantes
-nueva_suma_columnas_base <- function() {
+# Nueva etapa: Suma de columnas importantes
+nueva_suma_columnas_base <- function(input_path) {
   if (-1 == (param_local <- exp_init())$resultado) return(0) # Línea fija
+  
   param_local$meta$script <- "/src/wf-etapas/z1611_nueva_suma_columnas.r"
+  
+  # Configurar la entrada explícitamente
+  param_local$input <- input_path
+  
   return(exp_correr_script(param_local)) # Línea fija
 }
+
 #------------------------------------------------------------------------------
 # Atencion, el undersampling es de 0.02
 #  tanto para entrenamineto como para  Final train$clase01_valor1
@@ -468,7 +475,7 @@ wf_SEMI_suma <- function( pnombrewf )
   
   CN_canaritos_asesinos_base(ratio=1, desvio=0)
   # Nueva etapa añadida después de Canaritos Asesinos
-  nueva_suma_columnas_base()
+  nueva_suma_columnas_base("~/buckets/b1/expw227/CN-0002/dataset.csv.gz")
   
 
   ts8 <- TS_strategy_base8()

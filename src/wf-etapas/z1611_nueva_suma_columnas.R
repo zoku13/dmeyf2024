@@ -9,8 +9,13 @@ require("data.table")
 require("yaml")
 
 # Leer el dataset generado por CN_canaritos_asesinos
-input_dataset <- "./dataset.csv.gz"
+args <- commandArgs(trailingOnly = TRUE)
+input_dataset <- args[1]
+if (!file.exists(input_dataset)) {
+  stop("El archivo de entrada no existe: ", input_dataset)
+}
 dataset <- fread(input_dataset)
+
 
 # Leer las columnas importantes desde el archivo impo_1.txt
 important_columns <- readLines("./impo_1.txt")[1:10]
@@ -28,7 +33,7 @@ for (i in seq_along(combination_names)) {
 }
 
 # Guardar el dataset extendido
-output_dataset <- "./dataset.csv.gz"
+output_dataset <- args[2]
 fwrite(dataset, output_dataset, compress = "gzip")
 
 cat("ETAPA z1611_nueva_suma_columnas.r END\n")
