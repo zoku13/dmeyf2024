@@ -1,7 +1,7 @@
 require("rlang")
 
 # workflow que voy a correr
-PARAM <- "src/workflows/990_sincanaritos_undersampling.r"
+PARAM <- "src/workflows/990_cols.r"
 
 envg <- env()
 

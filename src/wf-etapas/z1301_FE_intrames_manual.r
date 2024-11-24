@@ -66,6 +66,19 @@ AgregarVariables_IntraMes <- function(dataset) {
   # variable extraida de una tesis de maestria de Irlanda
   if( atributos_presentes( c("mpayroll", "cliente_edad") ))
     dataset[, mpayroll_sobre_edad := mpayroll / cliente_edad]
+  
+  
+  # **Incorporación: Ratios Financieros**
+  dataset[, ratio_payroll_saldo := mpayroll / (1 + mcuentas_saldo)]
+  dataset[, ratio_visa_consumo := mtarjeta_visa_consumo / (1 + ctarjeta_visa)]
+  dataset[, ratio_productos := cproductos / (1 + mpasivos_margen)]
+  
+  # **Incorporación: Interacciones entre Variables**
+  dataset[, interaccion_transacciones := ctrx_quarter_normalizado * cproductos]
+  dataset[, interaccion_margen := mactivos_margen * mpasivos_margen]
+  dataset[, interaccion_saldo_payroll := mcuentas_saldo * mpayroll]
+  dataset[, interaccion_experimento := ctrx_quarter_normalizado + ctarjeta_visa_transacciones]
+  
 
   # se crean los nuevos campos para MasterCard  y Visa,
   #  teniendo en cuenta los NA's
