@@ -36,8 +36,7 @@ cat("lectura del dataset\n")
 arch <- envg$PARAM$archivo
 action_verificar_archivo( arch )
 cat( "Iniciando lectura del archivo\n" )
-#dataset <- fread( arch )
-dataset <- fread( arch )[clase_ternaria != "BAJA+1"]  # Filtrar filas con clase_ternaria != "BAJA+1"
+dataset <- fread( arch )
 cat( "Finalizada lectura del archivo\n" )
 
 #--------------------------------------
