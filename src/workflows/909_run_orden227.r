@@ -1,7 +1,11 @@
 require("rlang")
 
 # workflow que voy a correr
+<<<<<<< HEAD
 PARAM <- "src/workflows/990_sincanaritosv2.r"
+=======
+PARAM <- "src/workflows/990_cols2.r"
+>>>>>>> 08bfa410473eab1080b6003585437dbbc05642b2
 
 envg <- env()
 
