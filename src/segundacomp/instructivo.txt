@@ -1,0 +1,19 @@
+1. Generar dataset con clase ternaria:
+
+Se utilizó el código generar_dataset
+
+2. Workflow WUBA-990: 
+
+ 2.1 Etapa modificada: z1101_DT_incorporar_dataset.r 
+
+     Se eliminan los BAJA+1
+
+ 2.2 Modificaciones al workflow base: Leer el script 990_sincanaritos
+
+     -Se modificó el training strategy eliminando 202003 y 202004, como también
+     se aumentaron algunos meses del 2019. Se aumento a 0.05 el undersampling de train
+     -Se aumentó lag1 y lag2, tendencias con 6 meses y 12 meses.
+     -En random Forest se utiliza num_iterations = 25. 
+     -Se elimina BAJA+1.
+
+
