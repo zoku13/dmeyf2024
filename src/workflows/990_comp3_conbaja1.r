@@ -19,7 +19,7 @@ envg$EXPENV$repo_dir <- "~/dmeyf2024/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$messenger <- "~/install/zulip_enviar.sh"
 
-envg$EXPENV$semilla_primigenia <- 903761
+envg$EXPENV$semilla_primigenia <- 103301
 
 # leo el unico parametro del script
 args <- commandArgs(trailingOnly=TRUE)
