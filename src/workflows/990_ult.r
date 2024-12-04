@@ -274,7 +274,7 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$train$validation <- c(202106)
   
   param_local$train$training <- c(
-    202107, 202106, 202105, 202102, 202101, 202012, 
+    202105, 202102, 202101, 202012, 
     202011, 202010, 202009, 202008, 202007, 202006, 202005,
     202002, 202001, 201912, 201911, 201910, 201909, 201908, 
     201907, 201906, 201905, 201902, 201901
@@ -438,7 +438,7 @@ wf_SEMI_final <- function( pnombrewf )
   
   CA_catastrophe_base( metodo="MachineLearning")
   FEintra_manual_base()
-  DR_drifting_base(metodo="ninguno")
+  DR_drifting_base(metodo="rank_cero_fijo")
   FEhist_base()
   ultimo <- FErf_attributes_base()
   
@@ -450,7 +450,7 @@ wf_SEMI_final <- function( pnombrewf )
   # la Bayesian Optimization con el semillerio dentro
   ht <- HT_tuning_semillerio(
     semillerio = 50, # semillerio dentro de la Bayesian Optim
-    bo_iteraciones = 20  # iteraciones inteligentes, apenas 10
+    bo_iteraciones = 15  # iteraciones inteligentes, apenas 10
   )
   
   
