@@ -1,0 +1,26 @@
+Se modificó el script semillero 990:
+
+-FEhist_base: lags y delta lags de orden 1 y 2, tendencias 6 y 12 meses.
+
+-FErf_attributes_base:
+	num_iterations = 25
+
+-Training strategy:
+	final_train:  [202107,201901] -{201903, 201904, 20203, 20204, 202103, 202104}
+	training: [202105,201901] -{201903, 201904, 20203, 20204, 202103, 202104}
+	final_train$undersampling <- 0.2
+	train$undersampling <- 0.2
+	param_local$future <- c(202109)
+	param_local$train$testing <- c(202107)
+	param_local$train$validation <- c(202106)
+
+-CN_canaritos_asesinos_base(ratio=1, desvio=0)
+
+-HT_tuning_semillerio: 
+	bo_iteraciones = 15
+
+-FM_final_models_lightgbm_semillerio:
+	semillerio = 100; repeticiones_exp = 5
+
+aclaración: la clase ternaria fue generada por el script en r
+compartido en la cátedra en el canal de zulip. 
