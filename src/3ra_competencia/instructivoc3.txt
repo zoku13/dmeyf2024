@@ -6,8 +6,8 @@ Se modificó el script semillero 990:
 	num_iterations = 25
 
 -Training strategy:
-	final_train:  [202107,201901] -{201903, 201904, 20203, 20204, 202103, 202104}
-	training: [202105,201901] -{201903, 201904, 20203, 20204, 202103, 202104}
+	final_train:  [201901, 202107] -{201903, 201904, 20203, 20204, 202103, 202104}
+	training: [201901, 202107] -{201903, 201904, 20203, 20204, 202103, 202104}
 	final_train$undersampling <- 0.2
 	train$undersampling <- 0.2
 	param_local$future <- c(202109)
